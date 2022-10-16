@@ -177,5 +177,5 @@ enviarMensajeWpp = () =>{
     // let mensaje = JSON.parse(carrito);
     // let mensaje = JSON.stringify(carrito[3], null, 2);
     const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio, 0);
-    window.location.assign(`//api.whatsapp.com/send?phone=1169960309&text=${JSON.stringify(carrito)}%20, El precio total es de:%20 ${nPrecio}`)
+    window.location.assign(`//api.whatsapp.com/send?phone=5491169960309&text=${JSON.stringify(carrito)}%20, El precio total es de:%20 ${nPrecio}`)
 }
