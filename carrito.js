@@ -30,6 +30,7 @@ const fetchData = async () =>{
         const data = await res.json();
         mostrarComida(data);
 
+
     } catch (error){
         console.log(error)
     }
