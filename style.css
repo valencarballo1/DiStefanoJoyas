@@ -32,3 +32,19 @@ img {
 .navColor{
     background-color: #f3cfb3;
 }
+
+.a{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h5 {
+    color: var(--text-color);
+    margin-bottom: 3px;
+    letter-spacing: initial;
+    font-size: var(--font-size);
+    font-family: var(--main-family);
+    font-weight: var(--main-weight);
+    font-style: var(--main-style);
+    letter-spacing: var(--main-spacing);
+}

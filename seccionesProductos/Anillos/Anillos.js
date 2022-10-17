@@ -27,12 +27,14 @@ items.addEventListener("click", e => {
 
 const fetchData = async () =>{
     try{
-        const res = await fetch ("data.json");
+        const res = await fetch ("/data.json");
         const data = await res.json();
-        if(data.contains("ANILLO")){
-            mostrarComida(data);
-        }
-        console.log(mostrarComida)
+        const resultado = data.filter(tipoData => {
+            if (tipoData.tipo == "ANILLO"){
+                return true;
+            }
+        })
+        mostrarProducto(resultado);
 
     } catch (error){
         console.log(error)
@@ -40,7 +42,7 @@ const fetchData = async () =>{
 }
 
 
-const mostrarComida = data => {
+const mostrarProducto = data => {
     data.forEach(producto => {
         templateCard.querySelector("h5").textContent = producto.name;
         templateCard.querySelector("p").textContent = producto.precio;
