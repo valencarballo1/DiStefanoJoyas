@@ -69,3 +69,23 @@ h5 {
     top: 0;
     z-index: 2;
 }
+
+.btn-danger{
+    background-color: white;
+    border-color: #C0C0C0;
+    color: black;
+}
+
+.btn-danger:hover{
+    background-color: #C0C0C0;
+}
+
+.btn-info{
+    background-color: white;
+    border-color: #C0C0C0;
+    color: black;
+}
+
+.btn-info:hover{
+    background-color: #C0C0C0;
+}

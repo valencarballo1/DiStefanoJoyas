@@ -27,7 +27,7 @@ items.addEventListener("click", e => {
 
 const fetchData = async () =>{
     try{
-        const res = await fetch ("/data.json");
+        const res = await fetch ("DiStefanoJoyas/data.json");
         const data = await res.json();
         const resultado = data.filter(tipoData => {
             if (tipoData.tipo == "ANILLO"){
@@ -44,7 +44,7 @@ const fetchData = async () =>{
 
 const mostrarProducto = data => {
     data.forEach(producto => {
-        templateCard.querySelector("h5").textContent = producto.name;
+        templateCard.querySelector("h6").textContent = producto.name;
         templateCard.querySelector("p").textContent = producto.precio;
         templateCard.querySelector("img").setAttribute("src", producto.img);
         templateCard.querySelector("#buttonComprar").dataset.id = producto.id;
@@ -65,7 +65,7 @@ const addCarrito = e =>{
 const setCarrito = objeto =>{
     const producto = {
         id: objeto.querySelector(".btn-dark").dataset.id,
-        name: objeto.querySelector("h5").textContent,
+        name: objeto.querySelector("h6").textContent,
         precio: objeto.querySelector("p").textContent,
         cantidad: 1,
         

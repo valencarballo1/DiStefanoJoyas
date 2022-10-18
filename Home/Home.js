@@ -26,7 +26,7 @@ items.addEventListener("click", e => {
 
 const fetchData = async () =>{
     try{
-        const res = await fetch ("/data.json");
+        const res = await fetch ("DiStefanoJoyas/data.json");
         const data = await res.json();
         mostrarProducto(data);
 
